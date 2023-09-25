@@ -1,0 +1,250 @@
+1.
+
+Thứ tự tăng dần của các hàm theo ký hiệu Big O là:
+2^10
+2^(log n)
+3n + 100logn
+4n
+nlogn
+4nlogn + 2n
+n^2 + 10n
+n^3
+2^n
+
+------------------------------------------------------------
+
+2.
+
+Tính 2^n theo 2 cách:
++)Cách 1: Đệ quy
+TinhLuyThuaHai(n)
+    if n == 0
+        return 1
+    else
+        return 2 * TinhLuyThuaHai(n - 1)
+
+//Hàm đệ quy được gọi n lần -> độ phức tạp O(n)
+
+
++)Cách 2: Vòng lặp
+TinhLuyThuaHai(n)
+    result = 1
+    for i from 1 to n
+        result = result * 2
+    return result
+
+//O(n)
+
+------------------------------------------------------------
+
+3.
+
+//Khởi tạo 1 queue với kích thước max
+InitializeQueue(queue, max_size)
+
+//Thêm 1 phần tử vào phía sau
+Enqueue(queue, element)
+    if queue is full
+        return "Queue is full"
+    else
+        queue.rear = (queue.rear + 1) % max_size
+        queue.array[queue.rear] = element
+
+//Xóa 1 phần tử ở phía trước
+Dequeue(queue)
+    if queue is empty
+        return "Queue is empty"
+    else
+        element = queue.array[queue.front]
+        queue.front = (queue.front + 1) % max_size
+        
+
+//Kiểm tra xem queue có rỗng hay không
+IsEmpty(queue)
+    return (queue.rear == queue.front)
+
+//Kiểm tra xem queue đã đầy chưa
+IsFull(queue)
+    return ((queue.rear + 1) % max_size == queue.front)
+
+/*Độ phức tạp:
+Enqueue: O(1) (do mảng kích thước cố định nên thao tác cần độ phức tạp thời gian hằng số)
+Dequeu: O(1) (do mảng kích thước cố định nên thao tác cần độ phức tạp thời gian hằng số)
+IsEmpty: O(1) (chỉ cần 1 phép so sánh)
+IsFull: O(1) (chỉ cần 1 phép so sánh) */
+
+------------------------------------------------------------
+
+4.
+
+Class Node:
+    Properties:
+        - int data
+        - Node* next
+
+    Constructor:
+        - Node(int data): Initialize data and set next to null
+
+Class Queue:
+    Private Properties:
+        - Node* front
+        - Node* rear
+
+    Constructor:
+        - Queue(): Initialize front and rear to null
+
+    Public Methods:
+        - Node* getFront(): Return front
+
+        - bool isEmpty():
+            Return true if front is null; otherwise, return false
+
+        - void enqueue(int data):
+            Create a new Node with data
+            If isEmpty() returns true:
+                Set front and rear to the new Node
+            Else:
+                Set rear->next to the new Node
+                Set rear to the new Node
+
+        - void dequeue():
+            Store front->data
+            Set temp to front
+            Set front to front->next
+            Delete temp
+
+/* Độ phức tạp:
+enqueue: O(1) (bao gồm tạo 1 node mới và cập nhật rear->next)
+dequeue: O(1) (bao gồm cập nhật front và xóa node cũ)
+getFront: O(1) (trả về 1 con trỏ mất đpt thời gian hằng số)
+isEmpty: O(1) */
+
+------------------------------------------------------------
+
+5.
+
+Initialize Stack:
+    // Tạo 1 stack rỗng bằng mảng
+    stack = new Array
+    top = -1
+
+Push (element):
+    // Thêm 1 phần tử vào đỉnh 
+    if top == the maximum stack size:
+        return;
+    else:
+        top = top + 1
+        stack[top] = element
+
+Pop:
+    // Xóa phần tử ở đỉnh và trả về giá trị đó
+    if top == -1:
+        return -1;
+    else:
+        element = stack[top]
+        top = top - 1
+        return element
+
+Peek:
+    // trả về giá trị ở đỉnh của stack
+        return stack[top]
+
+isEmpty:
+    // Check if the stack is empty
+    return (top == -1)
+
+isFull:
+    // Check if the stack is full
+    return (top == maximum stack size)
+
+/* Độ phức tạp:
+Initialize: O(1) (tạo mảng và cài giá trị đầu cho top)
+Push: O(1) (gồm thao tác cập nhật top và gán giá trị cho phần tử tại top) 
+Pop: O(1) (cập nhật top và xóa phần tử cũ)
+isEmpty: O(1) (1 phép so sánh)
+isFull: O(1) (1 phép so sánh) */
+
+------------------------------------------------------------
+
+6.
+
+Class Node:
+    Properties:
+        - int data
+        - Node* next
+
+    Constructor:
+        - Node(int data): Initialize data and set next to null
+
+Class Stack:
+    top: Node
+
+    Constructor Stack():
+        Set this->top to null
+
+    Method getTop():
+        Return this->top
+
+    Method push(data: integer):
+        newNode = new Node(data)
+        newNode->next = this->top
+        this->top = newNode
+
+    Method pop():
+        temp = this->top
+        this->top = this->top->next
+        Delete temp
+
+/*Độ phức tạp:
+push: O(1) (tạo 1 node mới và gán next của nó vào top cũ và gán top vào node mới thêm)
+pop: O(1) (lưu top hiện tại vào biến tạm, gán top thành top->next, cuối cùng xóa đi biến tạm (tương đương xóa đi top cũ) )
+getTop: O(1) (trả về node top) */
+
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
