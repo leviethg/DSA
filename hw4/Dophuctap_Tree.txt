@@ -1,0 +1,129 @@
+Đánh giá độ phức tạp của từng hàm trong cài đặt cây, trường hợp tốt nhất và xấu nhất:
+
+1. Node* findNode(Node* temp, int const data)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm duyệt toàn bộ cây để tìm kiếm node có giá trị data.
+
+   - Trường hợp tốt nhất: O(1) khi cây chỉ có một node và node đó chính là node cần tìm.
+   
+   - Trường hợp xấu nhất: O(N) khi node cần tìm nằm ở cuối của cây hoặc không tồn tại trong cây.
+
+2. int numOfChildren()
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node con của node hiện tại. Hàm duyệt qua toàn bộ danh sách các node con.
+
+   - Trường hợp tốt nhất: O(1) khi node không có node con.
+
+   - Trường hợp xấu nhất: O(N) khi node có nhiều node con.
+
+3. void preorder(Node* temp)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm phải duyệt qua tất cả các node trong cây.
+
+   - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+4. void postorder(Node* temp)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm phải duyệt qua tất cả các node trong cây.
+
+   - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+5. bool isBinaryTree(Node* temp)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm kiểm tra xem cây có phải là cây nhị phân không.
+
+   - Trường hợp tốt nhất: O(1) khi cây chỉ có một node hoặc là một cây nhị phân đúng.
+
+   - Trường hợp xấu nhất: O(N) khi cây không phải là cây nhị phân.
+
+6. bool isBinarySearchTree(Node* temp)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm kiểm tra xem cây có phải là cây tìm kiếm nhị phân không.
+
+   - Trường hợp tốt nhất: O(1) khi cây chỉ có một node hoặc là một cây tìm kiếm nhị phân đúng.
+
+   - Trường hợp xấu nhất: O(N) khi cây không phải là cây tìm kiếm nhị phân.
+
+7. bool isMaxHeapTree(Node* temp)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm kiểm tra xem cây có phải là Max Heap không.
+
+   - Trường hợp tốt nhất: O(1) khi cây chỉ có một node hoặc là một MaxHeap đúng.
+
+   - Trường hợp xấu nhất: O(N) khi cây không phải là MaxHeap.
+
+8. void findMax(Node* temp, int& max)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm phải duyệt qua toàn bộ cây để tìm giá trị lớn nhất.
+
+   - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+9. int numOfLeaves(Node* temp)
+
+   - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm phải duyệt qua toàn bộ cây để đếm số lượng lá.
+
+   - Trường hợp tốt nhất: O(1) khi cây chỉ có một node hoặc không có lá nào.
+
+   - Trường hợp xấu nhất: O(N) khi cây không có lá.
+
+10. int findMax()
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm phải duyệt qua toàn bộ cây để tìm giá trị lớn nhất.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+11. int findMaxChild()
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm này phải duyệt qua toàn bộ cây để tìm node có nhiều node con nhất.
+
+    -Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+Tiếp tục với các hàm còn lại trong chương trình của bạn:
+
+12. int remove(int data)
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm này phải duyệt qua toàn bộ cây để tìm và xoá node có giá trị data.
+
+    - Trường hợp tốt nhất: O(1) khi node cần xoá là node gốc và cây chỉ có một node.
+
+    - Trường hợp xấu nhất: O(N) khi node cần xoá nằm ở cuối của cây hoặc không tồn tại trong cây.
+
+13. void preorder()
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm này phải duyệt qua toàn bộ cây để in ra các node theo thứ tự preorder.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+14. void postorder()
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm này phải duyệt qua toàn bộ cây để in ra các node theo thứ tự postorder.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+15. void inorder(Node* node)
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm này phải duyệt qua toàn bộ cây để in ra các node theo thứ tự inorder.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+16. int height()
+
+    - Độ phức tạp trung bình: O(N), trong đó N là số lượng node trong cây. Hàm này phải duyệt qua toàn bộ cây để tính độ cao của cây.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì phải duyệt qua toàn bộ cây.
+
+17. int depth(int data)
+
+    - Độ phức tạp trung bình: O(N), trong đó N là độ sâu của node có giá trị data. Hàm này phải duyệt lên từ node có giá trị data đến node gốc của cây.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì độ sâu của node có giá trị data có thể là độ cao của cây.
+
+18. int depth(Node* node)
+
+    - Độ phức tạp trung bình: O(N), trong đó N là độ sâu của node. Hàm này phải duyệt lên từ node đến node gốc của cây.
+
+    - Trường hợp tốt nhất và trường hợp xấu nhất đều là O(N) vì độ sâu của node có thể là độ cao của cây.
+
+(*) Tổng kết, hầu hết các hàm trong chương trình cài đặt có độ phức tạp trung bình là O(N), với trường hợp tốt nhất và xấu nhất cũng thường là O(N), do phải duyệt qua toàn bộ cây để thực hiện các thao tác.
+
+
