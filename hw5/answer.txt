@@ -1,0 +1,76 @@
+1.
+Hai tính chất mà chúng ta mong muốn ở hàm băm là:
+
+(+) Tính xác định: Hàm băm phải tạo ra cùng một giá trị băm cho cùng một đầu vào với mỗi lần áp dụng. Tính chất này tạo ra sự nhất quán và tin cậy cho việc áp dụng hàm băm, chẳng hạn như xác minh tính toàn vẹn của dữ liệu hay lưu trữ mật khẩu.
+
+(+) Tính phân bố đều: Một hàm băm tốt sẽ phân phối đầu ra của nó (giá trị băm) càng đồng đều càng tốt trên không gian đầu ra của nó. Tính chất này đảm bảo dữ liệu phân bố đồng đều trên các vùng có sẵn, giảm thiểu xung đột và cải thiện hiệu suất.
+
+-------------------------------------------
+ 
+2.
+a) 
+0 -> 
+1 -> 20
+2 -> 94
+3 -> 
+4 -> 16 -> 88 -> 5
+5 -> 44 -> 11 -> 23 -> 39 -> 13
+6 -> 
+7 -> 12
+8 -> 
+9 -> 
+10 ->
+
+b)
+0 -> 88
+1 -> 20
+2 -> 94
+3 -> 5
+4 -> 16
+5 -> 44
+6 -> 11
+7 -> 12
+8 -> 23
+9 -> 39
+10 -> 13
+
+-------------------------------------------
+
+3.
+a)
+0 -> 
+1 -> 
+2 -> 
+3 -> 3 -> 18 -> 36
+4 -> 
+5 -> 20
+6 -> 11
+7 -> 
+8 -> 8
+9 -> 23
+10 -> 
+11 -> 
+12 -> 16
+13 -> 
+14 -> 
+15 -> 
+16 -> 1 -> 35
+
+b)
+0 -> 18
+1 -> 36
+2 -> 35
+3 -> 3
+4 -> 
+5 -> 20
+6 -> 11
+7 -> 
+8 -> 8
+9 -> 23
+10 -> 
+11 -> 
+12 -> 16
+13 -> 
+14 -> 
+15 -> 
+16 -> 1
