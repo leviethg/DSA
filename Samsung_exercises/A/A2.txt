@@ -1,4 +1,0 @@
-Từ V đỉnh có thể tạo thành V*(V-1)/2 cạnh.
-Chọn E cạnh trong đó ta thu được một đồ thị.
-Do đó có tất cả C(V*(V-1)/2, E) đồ thị.
-(Trong đó C(n, k) là tổ hợp chập k của n phần tử)).
