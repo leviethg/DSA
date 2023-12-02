@@ -1,0 +1,4 @@
+Xét đồ thị có hướng có V đỉnh, Xét một định bất kỳ, ví dụ là A. Xét V-1 đỉnh còn lại, mỗi đỉnh có thể chọn nối từ A đến nó hoặc không => có 2^(V-1) cách chọn.
+Có V đỉnh, mỗi đỉnh có thể được nối hoặc không
+=> Số cách chọn đồ thị không có cạnh song song là:
+2^V * 2^(V-1) = 2^(V*(V-1))

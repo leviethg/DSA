@@ -1,0 +1,21 @@
+Để tính thành phần liên thông mạnh (SCC - Strongly Connected Components) của một đồ thị có hướng, có thể sử dụng thuật toán Kosaraju.
+
+Thuật toán Kosaraju:
+Bước 1:
+	Duyệt đồ thị theo DFS và lưu lại các đỉnh khi hoàn thành việc duyệt thông qua việc đưa đỉnh vào một ngăn xếp sau khi hoàn thành việc duyệt các đỉnh con của nó.
+Bước 2:
+	Lặp qua các đỉnh theo thứ tự ngược từ việc duyệt DFS ở bước 1.
+	Mỗi lần lấy một đỉnh ra khỏi ngăn xếp, nếu đỉnh này chưa được duyệt theo DFS ngược, thực hiện DFS từ đỉnh này. Các đỉnh mà bạn duyệt trong quá trình này sẽ tạo thành một thành phần liên thông mạnh.
+
+
+Thuật toán Kosaraju có độ phức tạp thời gian là O(V + E), trong đó V là số đỉnh, E là số cạnh trong đồ thị.
+
+Thuật toán thời gian bậc hai để tính các thành phần liên thông mạnh:
+Nếu muốn thuật toán đơn giản hơn có thể thực hiện việc duyệt DFS hai lần.
+
+Bước 1
+	Duyệt đồ thị theo DFS, lưu trữ thứ tự hoàn thành của việc duyệt các đỉnh.
+Bước 2 
+	Đảo ngược tất cả các cạnh trong đồ thị ban đầu.
+	Duyệt đồ thị theo thứ tự DFS theo thứ tự từ các đỉnh được lưu trữ từ bước 1.
+	Mỗi lần thực hiện DFS từ một đỉnh chưa được duyệt, các đỉnh bạn duyệt trong quá trình này sẽ tạo thành một thành phần liên thông mạnh.

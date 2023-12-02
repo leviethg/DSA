@@ -1,0 +1,9 @@
+Thứ tự tô pô (topological order) trong một đồ thị có hướng là một thứ tự sắp xếp các đỉnh sao cho nếu có một cạnh từ đỉnh u đến đỉnh v, thì đỉnh u phải xuất hiện trước đỉnh v trong thứ tự đó. Đồ thị có thứ tự tô pô khi và chỉ khi nó không có chu trình.
+
+Thuật toán BFS (Breadth-First Search) không đảm bảo tạo ra thứ tự tô pô đúng cho một đồ thị có hướng vì BFS chỉ sắp xếp các đỉnh theo khoảng cách tới đỉnh nguồn mà không quan tâm đến thứ tự tương đối của các đỉnh trong một chu trình.
+
+Ví dụ minh họa:
+
+Đồ thị có hướng sau không có chu trình: A -> B, A -> C, B -> D, C -> D. Thứ tự tô pô chính xác của đồ thị này là A, B, C, D. Nếu ta áp dụng BFS từ đỉnh A, ta sẽ duyệt qua các đỉnh theo thứ tự A, B, C, D. Tuy nhiên, nếu ta bắt đầu từ đỉnh B, ta cũng sẽ có thứ tự duyệt là B, D sau đó, nhưng không thể kết luận B phải đứng trước D vì có cạnh nối từ A -> B và A -> C, và việc duyệt từ B không thể xác định được thứ tự tô pô đúng.
+
+Do đó, thuật toán BFS không phù hợp để tạo ra thứ tự tô pô chính xác cho một đồ thị có hướng.

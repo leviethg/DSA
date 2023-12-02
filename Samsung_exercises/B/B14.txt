@@ -1,0 +1,1 @@
+Theo định lý Cayley, số đồ thị có hướng phi chu trình chứa V đỉnh là V^(V-1).
