@@ -1,0 +1,9 @@
+Bài 1: Chu trình Euler và chu trình Hamilton
+Một đồ thị vô hướng liên thông có chu trình Euler khi và chỉ khi tất cả các đỉnh của nó đều có bậc chẵn.
++) Đồ thị 1 có deg(0) = 3 là lẻ nên không có chu trình Euler.
+Không có chu trình Hamilton.
++) Đồ thị 2 không liên thông nên không có chu trình Euler, không có chu trình Hamilton.
++) Đồ thị 3 có deg(0) = 3 là lẻ nên không có chu trình Euler.
+Chu trình Hamilton: 0 → 1 → 2 → 9 → 5 → 8 → 4 → 7 → 6 → 3
++) Đồ thị 4 có deg(0) = 3 là lẻ nên không có chu trình Euler.
+Không có chu trình Hamilton.

@@ -1,0 +1,9 @@
+Giả sử đồ thị không có điểm articulation. Ta chọn một cặp đỉnh bất kỳ s và t và tìm một đường đi nối chúng, gọi là đường đi P.
+
+Nếu không có đỉnh nào trên đường đi P là điểm articulation, điều này có nghĩa rằng nếu bất kỳ đỉnh nào trên đường đi P bị xóa, đồ thị vẫn duy trì tính liên thông giữa s và t. Do đó, khi xóa bất kỳ đỉnh nào trên đường đi P, vẫn còn tồn tại một đường đi khác nối s và t.
+
+Bây giờ, để chứng minh đồ thị là biconnected, ta cần chứng minh rằng hai đường đi này không giao nhau.
+
+Nếu hai đường đi này giao nhau tại một đỉnh, ta có thể xác định một đỉnh là điểm articulation, điều này mâu thuẫn với giả định ban đầu rằng đồ thị không có điểm articulation.
+
+Do đó, nếu không có đỉnh nào trên đường đi P là điểm articulation và hai đường đi này không giao nhau tại bất kỳ đỉnh nào, ta có thể kết luận rằng đồ thị không có điểm articulation sẽ là đồ thị biconnected.

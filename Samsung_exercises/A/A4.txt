@@ -1,0 +1,9 @@
+Chiều xuôi: 
+Đồ thị V bipartite (màu xanh và đỏ) -> nó không có chu trình độ dài lẻ
+Giả sử tồn tại chu trình xuất phát từ đỉnh A : A -> B -> C -> ... -> A. 
+Ta dễ thấy không tồn tại 2 đỉnh liên tiếp có cùng màu trên đường đi nói trên.
+Vậy nếu ta coi A bắt đầu ở vị 1 -> A kết thúc ở vị trí 2k+1 => độ dài đường đi là 2k
+
+Chiều ngược:
+Ta tô màu cho đỉnh bắt đầu là đỏ; các đỉnh kề với nó là xanh; các đỉnh kề với các đỉnh xanh là đỏ; các đỉnh kề với các đỉnh đỏ là xanh; và cứ tiếp tục như vậy.
+Nếu G không chứa chu trình lẻ thì đỉnh kết thúc của chu trình có màu khác với đỉnh bắt đầu. Vậy G là đồ thị bipartile.
